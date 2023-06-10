@@ -102,6 +102,18 @@ class ZingController {
     const jsonData = await response.json();
     res.json(jsonData);
   }
+  async suggestSearch(req, res) {
+    const response = await fetch(
+      "https://ac.zingmp3.vn/v1/web/ac-suggestions?" +
+        new URLSearchParams({
+          num: 10,
+          query: req.query.query,
+          language: "vi",
+        })
+    );
+    const jsonData = await response.json();
+    res.json(jsonData);
+  }
 }
 
 module.exports = new ZingController();

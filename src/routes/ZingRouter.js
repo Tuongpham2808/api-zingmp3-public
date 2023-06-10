@@ -48,4 +48,7 @@ router.get("/video", ZingController.getVideo);
 // getVideo
 router.get("/RelatedSong", ZingController.RelatedSong);
 
+// suggestSeach
+router.get("/suggestSearch", ZingController.suggestSearch);
+
 module.exports = router;
